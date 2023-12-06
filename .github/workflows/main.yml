@@ -192,7 +192,7 @@ jobs:
       # Publish a release if is a tag
       - name: Release
         uses: softprops/action-gh-release@v1
-        # if: env.VERSION != ''
+        if: env.VERSION != ''
         with:
           tag_name: ${{ env.VERSION }}
           prerelease: ${{ inputs.prerelease }}
